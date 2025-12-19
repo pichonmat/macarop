@@ -4,6 +4,24 @@
     <title>Hello World</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1 id="titre">Hello World</h1>
+    <button id="bouton">Cliquez-moi !</button>
+    <div id="message"></div>
+
+    <script>
+        // Récupération des éléments HTML
+        const titre = document.getElementById('titre');
+        const bouton = document.getElementById('bouton');
+        const message = document.getElementById('message');
+
+        // Ajout d'un événement click sur le bouton
+        bouton.addEventListener('click', function() {
+            // Modification du texte du titre
+            titre.textContent = 'Bonjour le monde !';
+
+            // Affichage d'un message
+            message.textContent = 'Vous avez cliqué sur le bouton !';
+        });
+    </script>
 </body>
 </html>
